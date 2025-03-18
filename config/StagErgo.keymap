@@ -69,7 +69,7 @@
 
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                      &trans            &trans        &trans          &kp LA(F4)     &trans             &kp DEL
-&trans      &trans        &trans        &trans        &kp F5        &kp C_VOLUME_UP                   &kp PG_UP         &kp HOME      &kp UP          &kp END        &kp LBKT           &kp RBKT
+&trans      &trans        &trans        &kp F2        &kp F5        &kp C_VOLUME_UP                   &kp PG_UP         &kp HOME      &kp UP          &kp END        &kp LBKT           &kp RBKT
 &trans      &trans        &trans        &kp LC(X)     &kp LC(C)     &kp C_PLAY_PAUSE  &trans  &trans  &kp PG_DN         &kp LEFT      &kp DOWN        &kp RIGHT      &none              &kp LC(LS(ESCAPE))
 &trans      &trans        &trans        &trans        &kp LC(V)     &kp C_VOL_DN      &trans  &trans  &kp LS(LC(LEFT))  &kp LC(LEFT)  &kp DOWN_ARROW  &kp LC(RIGHT)  &kp LS(LC(RIGHT))  &kp LC(LA(DEL))
                                                       &trans        &trans            &trans  &trans  &trans            &trans
