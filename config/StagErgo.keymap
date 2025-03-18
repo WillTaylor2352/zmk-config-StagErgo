@@ -16,6 +16,11 @@
             bindings = <&kp RET>;
             key-positions = <45 55>;
         };
+
+        SingleSpaceWhenDoublePressed {
+            bindings = <&kp SPACE>;
+            key-positions = <55 56>;
+        };
     };
 
     keymap {
