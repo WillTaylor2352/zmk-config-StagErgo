@@ -34,11 +34,18 @@
     };
 
     macros {
-        new_macro: new_macro {
+        select_from: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp S &kp E &kp L &kp E &kp C &kp T &kp RET &kp STAR &kp RET &kp F &kp R &kp O &kp M &kp SPACE &kp SPACE &kp W &kp I &kp T &kp H &kp LPAR &kp N &kp O &kp L &kp O &kp C &kp K &kp RPAR>;
             label = "NEW_MACRO";
+        };
+
+        create_text_file: create_text_file {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(F10) &kp W &kp T>;
+            label = "CREATE_TEXT_FILE";
         };
     };
 
@@ -87,11 +94,11 @@
             //                                           |       |         |      | |       |           |               |                                               
 
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                      &trans            &trans        &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DEL
-&new_macro  &trans        &trans        &kp F2        &kp F5        &kp C_VOLUME_UP                   &kp LS(LC(LEFT))  &kp LC(LEFT)  &kp UP          &kp LC(RIGHT)     &kp LC(LS(RIGHT))  &trans
-&trans      &trans        &trans        &kp LC(X)     &kp LC(C)     &kp C_PLAY_PAUSE  &trans  &trans  &trans            &kp LEFT      &kp DOWN        &kp RIGHT         &none              &kp LC(LS(ESCAPE))
-&trans      &trans        &trans        &trans        &kp LC(V)     &kp C_VOL_DN      &trans  &trans  &kp LC(HOME)      &kp HOME      &kp DOWN_ARROW  &kp END           &kp LC(END)        &kp LC(LA(DEL))
-                                                      &trans        &trans            &trans  &trans  &trans            &trans
+&bt BT_CLR    &bt BT_SEL 0       &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                      &trans            &trans        &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DEL
+&select_from  &create_text_file  &trans        &kp F2        &kp F5        &kp C_VOLUME_UP                   &kp LS(LC(LEFT))  &kp LC(LEFT)  &kp UP          &kp LC(RIGHT)     &kp LC(LS(RIGHT))  &trans
+&trans        &kp LS(LC(N))      &trans        &kp LC(X)     &kp LC(C)     &kp C_PLAY_PAUSE  &trans  &trans  &trans            &kp LEFT      &kp DOWN        &kp RIGHT         &none              &kp LC(LS(ESCAPE))
+&trans        &trans             &trans        &trans        &kp LC(V)     &kp C_VOL_DN      &trans  &trans  &kp LC(HOME)      &kp HOME      &kp DOWN_ARROW  &kp END           &kp LC(END)        &kp LC(LA(DEL))
+                                                             &trans        &trans            &trans  &trans  &trans            &trans
             >;
         };
     };
