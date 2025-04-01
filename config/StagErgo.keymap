@@ -26,6 +26,11 @@
             bindings = <&kp LA(F4)>;
             key-positions = <54 44 45 55>;
         };
+
+        Remove_magnification_shortcut {
+            bindings = <&none>;
+            key-positions = <45 31>;
+        };
     };
 
     macros {
