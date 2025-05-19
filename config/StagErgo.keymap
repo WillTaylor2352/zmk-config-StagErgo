@@ -31,6 +31,21 @@
             bindings = <&none>;
             key-positions = <45 31>;
         };
+
+        left_enter {
+            bindings = <&kp RET>;
+            key-positions = <28 27>;
+        };
+
+        right_enter_mid {
+            bindings = <&kp RET>;
+            key-positions = <33 34>;
+        };
+
+        altf4 {
+            bindings = <&kp LA(F4)>;
+            key-positions = <41 42 52>;
+        };
     };
 
     macros {
