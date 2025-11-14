@@ -70,11 +70,11 @@
             //                                 | LOWER | SPACE    |   CTL   || ENTER   | SPACE    |  RAISE|                                     
 
             bindings = <
-&kp ESC    &kp N1  &kp N2  &kp N3  &kp N4     &kp N5                           &kp N6     &kp N7  &kp N8     &kp N9   &kp N0    &kp BSPC
-&kp TAB    &kp Q   &kp W   &kp E   &kp R      &kp T                            &kp Y      &kp U   &kp I      &kp O    &kp P     &kp NUBS
-&kp CAPS   &kp A   &kp S   &kp D   &kp F      &kp G      &kp MINUS  &kp EQUAL  &kp H      &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z   &kp X   &kp C   &kp V      &kp B      &kp LALT   &kp LGUI   &kp N      &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                                   &kp LCTRL  &kp SPACE  &mo 1      &kp SPACE  &kp SPACE  &mo 1
+&kp ESC    &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                           &kp N6     &kp N7  &kp N8     &kp N9   &kp N0    &kp BSPC
+&kp TAB    &kp Q   &kp W   &kp E   &kp R   &kp T                            &kp Y      &kp U   &kp I      &kp O    &kp P     &kp NUBS
+&kp CAPS   &kp A   &kp S   &kp D   &kp F   &kp G      &kp MINUS  &kp EQUAL  &kp H      &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z   &kp X   &kp C   &kp V   &kp B      &kp LALT   &kp LGUI   &kp N      &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                                   &none   &kp SPACE  &mo 1      &kp SPACE  &kp SPACE  &mo 1
             >;
         };
 
@@ -107,7 +107,7 @@
 &kp LS(TAB)  &create_text_file  &kp F12       &kp F2        &kp F5      &kp C_VOLUME_UP                      &kp LS(LC(LEFT))  &kp LC(LEFT)  &kp UP          &kp LC(RIGHT)     &kp LC(LS(RIGHT))  &kp GRAVE
 &trans       &kp LC(A)          &kp LC(X)     &kp LC(C)     &kp LC(V)   &kp C_PLAY_PAUSE  &trans  &mkp LCLK  &trans            &kp LEFT      &kp DOWN        &kp RIGHT         &none              &kp LC(LS(ESCAPE))
 &trans       &kp LS(LC(N))      &trans        &kp C_PREV    &kp C_NEXT  &kp C_VOL_DN      &trans  &trans     &kp LC(HOME)      &kp HOME      &kp DOWN_ARROW  &kp END           &kp LC(END)        &kp LC(LA(DEL))
-                                                            &trans      &trans            &trans  &trans     &trans            &trans
+                                                            &kp LCTRL   &trans            &trans  &trans     &trans            &trans
             >;
         };
     };
