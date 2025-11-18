@@ -29,7 +29,7 @@
 
         RaiseLayer1 {
             bindings = <&mo 1>;
-            key-positions = <15 16>;
+            key-positions = <43 42>;
         };
 
         RaiseLayer1_1 {
