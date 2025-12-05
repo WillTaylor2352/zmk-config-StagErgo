@@ -119,4 +119,12 @@
     };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
+
+		behaviors {
+			dual_mo_1_2: dual_mo_1_2 {
+					compatible = "zmk,behavior-macro";
+					#binding-cells = <0>;
+					bindings = <&mo 1 &mo 2>;
+			};
+	};
 };
