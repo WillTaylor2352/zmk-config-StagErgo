@@ -66,11 +66,11 @@
             //                                 | LOWER | SPACE    |   CTL   || ENTER   | SPACE    |  RAISE|                                     
 
             bindings = <
-&kp ESC    &kp N1  &kp N2  &kp N3  &kp N4     &kp N5                           &kp N6     &kp N7  &kp N8     &kp N9   &kp N0    &kp BSPC
-&kp TAB    &kp Q   &kp W   &kp E   &kp R      &kp T                            &kp Y      &kp U   &kp I      &kp O    &kp P     &kp NUBS
-&kp CAPS   &kp A   &kp S   &kp D   &kp F      &kp G      &kp MINUS  &kp EQUAL  &kp H      &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z   &kp X   &kp C   &kp V      &kp B      &kp LALT   &kp LGUI   &kp N      &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                                   &kp SPACE  &kp LCTRL  &mo 1      &mo 2      &kp SPACE  &mo 1
+&kp ESC    &kp N1  &kp N2  &kp N3  &kp N4     &kp N5                              &kp N6     &kp N7  &kp N8     &kp N9   &kp N0    &kp BSPC
+&kp TAB    &kp Q   &kp W   &kp E   &kp R      &kp T                               &kp Y      &kp U   &kp I      &kp O    &kp P     &kp NUBS
+&kp CAPS   &kp A   &kp S   &kp D   &kp F      &kp G      &kp MINUS  &kp EQUAL     &kp H      &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z   &kp X   &kp C   &kp V      &kp B      &kp LALT   &kp LGUI      &kp N      &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                                   &kp SPACE  &kp LCTRL  &mo 1      &dual_mo_1_2  &kp SPACE  &mo 1
             >;
         };
 
@@ -120,11 +120,11 @@
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
-		behaviors {
-			dual_mo_1_2: dual_mo_1_2 {
-					compatible = "zmk,behavior-macro";
-					#binding-cells = <0>;
-					bindings = <&mo 1 &mo 2>;
-			};
-	};
+    behaviors {
+        dual_mo_1_2: dual_mo_1_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mo 1 &mo 2>;
+        };
+    };
 };
