@@ -66,11 +66,11 @@
             //                                 | LOWER | SPACE    |   CTL   || ENTER   | SPACE    |  RAISE|                                     
 
             bindings = <
-&kp ESC    &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                           &kp N6     &kp N7  &kp N8     &kp N9   &kp N0    &kp BSPC
-&kp TAB    &kp Q   &kp W   &kp E   &kp R   &kp T                            &kp Y      &kp U   &kp I      &kp O    &kp P     &kp NUBS
-&kp CAPS   &kp A   &kp S   &kp D   &kp F   &kp G      &kp MINUS  &kp EQUAL  &kp H      &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z   &kp X   &kp C   &kp V   &kp B      &kp LALT   &kp LGUI   &kp N      &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                                   &none   &kp LCTRL  &mo 1      &mo 2      &kp SPACE  &mo 1
+&kp ESC    &kp N1  &kp N2  &kp N3  &kp N4     &kp N5                           &kp N6     &kp N7  &kp N8     &kp N9   &kp N0    &kp BSPC
+&kp TAB    &kp Q   &kp W   &kp E   &kp R      &kp T                            &kp Y      &kp U   &kp I      &kp O    &kp P     &kp NUBS
+&kp CAPS   &kp A   &kp S   &kp D   &kp F      &kp G      &kp MINUS  &kp EQUAL  &kp H      &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z   &kp X   &kp C   &kp V      &kp B      &kp LALT   &kp LGUI   &kp N      &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                                   &kp SPACE  &kp LCTRL  &mo 1      &mo 2      &kp SPACE  &mo 1
             >;
         };
 
@@ -100,7 +100,7 @@
 
             bindings = <
 &none      &none              &none      &none      &none         &none                                       &trans            &trans        &trans    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DEL
-&none      &create_text_file  &none      &kp F2     &kp F5        &none                                       &kp LS(LC(LEFT))  &kp LC(LEFT)  &kp UP    &kp LC(RIGHT)     &kp LC(LS(RIGHT))  &kp GRAVE
+&none      &create_text_file  &kp F12    &kp F2     &kp F5        &none                                       &kp LS(LC(LEFT))  &kp LC(LEFT)  &kp UP    &kp LC(RIGHT)     &kp LC(LS(RIGHT))  &kp GRAVE
 &kp LCTRL  &kp LC(A)          &kp LC(X)  &kp LC(C)  &kp LC(V)     &kp C_PLAY_PAUSE  &kp LC(LEFT_ALT)  &trans  &kp LC(H)         &kp LEFT      &kp DOWN  &kp RIGHT         &none              &kp LC(LS(ESCAPE))
 &trans     &kp LS(LC(N))      &trans     &none      &none         &trans            &trans            &trans  &kp LC(HOME)      &kp HOME      &none     &kp END           &kp LC(END)        &kp LC(LA(DEL))
                                                     &ctrlk_ctrlc  &trans            &trans            &trans  &trans            &trans
@@ -111,10 +111,19 @@
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans   &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans      &trans        &trans        &trans        &trans   &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&kp F1      &kp F3        &kp F2        &kp F4        &kp F5   &kp F6   &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp F1      &kp F2        &kp F3        &kp F4        &kp F5   &kp F6   &trans   &trans  &trans  &none   &trans  &trans  &trans  &trans
 &kp F7      &kp F8        &kp F9        &kp F10       &kp F10  &kp F11  &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans
                                                       &trans   &trans   &kp F12  &trans  &trans  &trans
             >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        transp-2-1 {
+            if-layers = <2>;
+            then-layer = <1>;
         };
     };
 };
