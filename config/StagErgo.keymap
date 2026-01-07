@@ -36,6 +36,11 @@
             bindings = <&mo 1>;
             key-positions = <19 20>;
         };
+
+        right_Space {
+            bindings = <&kp SPACE>;
+            key-positions = <34 35>;
+        };
     };
 
     macros {
@@ -121,22 +126,21 @@
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
     behaviors {
-			dual_mo_1_2: dual_mo_1_2 {
-					compatible = "zmk,behavior-macro";
-					wait-ms = <0>;   /* no delay */
-					tap-ms  = <0>;   /* not used, but set to 0 for deterministic behavior */
-					#binding-cells = <0>;
-
-					bindings =
-							/* press &mo 1, press &mo 2 when macro is pressed */
-							<&macro_press  &mo 1>
-						, <&macro_press  &mo 2>
-							/* wait here until macro is released */
-						, <&macro_pause_for_release>
-							/* release &mo 1, release &mo 2 when macro is released */
-						, <&macro_release &mo 1>
-						, <&macro_release &mo 2>
-					;
-			};
-	};
+        dual_mo_1_2: dual_mo_1_2 {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;   /* no delay */
+            tap-ms = <0>;   /* not used, but set to 0 for deterministic behavior */
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&mo 1>,
+                <&macro_press>,
+                <&mo 2>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&mo 1>,
+                <&macro_release>,
+                <&mo 2>;
+        };
+    };
 };
