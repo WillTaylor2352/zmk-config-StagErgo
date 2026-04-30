@@ -33,7 +33,7 @@
 
         altf4 {
             bindings = <&kp LA(F4)>;
-            key-positions = <41 42 52>;
+            key-positions = <54 27 28>;
         };
 
         RaiseLayer1 {
@@ -164,7 +164,7 @@
             label = "STICKY_L1_IF_TAPPED";
             #binding-cells = <2>;
             hold-trigger-key-positions = <54>;
-            tapping-term-ms = <350>;
+            tapping-term-ms = <250>;
             bindings = <&mo>, <&sl>;
         };
     };
