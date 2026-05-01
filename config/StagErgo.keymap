@@ -22,7 +22,7 @@
         compatible = "zmk,combos";
 
         left_enter {
-            bindings = <&kp RET>;
+            bindings = <&L2_If_held_otw_ent 2 ENTER>;
             key-positions = <28 27>;
         };
 
@@ -49,11 +49,6 @@
         right_Space {
             bindings = <&kp SPACE>;
             key-positions = <34 35>;
-        };
-
-        alt_mouse_control {
-            bindings = <&mo 2>;
-            key-positions = <15 16>;
         };
     };
 
@@ -190,13 +185,12 @@
             label = "UR_MOUSE";
         };
 
-        Sticky_L1_If_Tapped: Sticky_L1_If_Tapped {
+        L2_If_held_otw_ent: L2_If_held_otw_ent {
             compatible = "zmk,behavior-hold-tap";
-            label = "STICKY_L1_IF_TAPPED";
+            label = "L2_IF_HELD_OTW_ENT";
             #binding-cells = <2>;
-            hold-trigger-key-positions = <54>;
-            tapping-term-ms = <250>;
-            bindings = <&mo>, <&sl>;
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&kp>;
         };
     };
 };
