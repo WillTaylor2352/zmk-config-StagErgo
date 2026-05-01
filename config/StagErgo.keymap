@@ -167,14 +167,26 @@
         ul_mouse: ul_mouse {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mmv MOVE_UP &mmv MOVE_LEFT>;
+            bindings =
+                <&macro_press>,
+                <&mmv MOVE_UP &mmv MOVE_LEFT>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&mmv MOVE_UP &mmv MOVE_LEFT>;
+
             label = "UL_MOUSE";
         };
 
         ur_mouse: ur_mouse {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mmv MOVE_UP &mmv MOVE_RIGHT>;
+            bindings =
+                <&macro_press>,
+                <&mmv MOVE_UP &mmv MOVE_RIGHT>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&mmv MOVE_UP &mmv MOVE_RIGHT>;
+
             label = "UR_MOUSE";
         };
 
