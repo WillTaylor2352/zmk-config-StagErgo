@@ -126,7 +126,7 @@
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans   &trans                      &trans          &trans          &mkp MB3        &trans           &trans         &trans
 &trans      &trans        &trans        &trans        &trans   &trans                      &none           &mkp MB4        &mmv MOVE_UP    &mkp MB5         &none          &trans
 &kp F1      &kp F2        &kp F3        &kp F4        &kp F5   &kp F6   &trans  &trans     &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp PAGE_UP    &kp LC(PAGE_UP)
-&kp F7      &kp F8        &kp F9        &kp F10       &kp F10  &kp F11  &trans  &trans     &msc SCRL_DOWN  &none           &msc SCRL_LEFT  &msc SCRL_RIGHT  &kp PAGE_DOWN  &kp LC(PAGE_DOWN)
+&kp F7      &kp F8        &kp F9        &kp F10       &kp F10  &kp F11  &trans  &trans     &msc SCRL_DOWN  &mkp LCLK       &msc SCRL_LEFT  &msc SCRL_RIGHT  &kp PAGE_DOWN  &kp LC(PAGE_DOWN)
                                                       &trans   &kp F12  &trans  &mkp LCLK  &mkp RCLK       &trans
             >;
         };
