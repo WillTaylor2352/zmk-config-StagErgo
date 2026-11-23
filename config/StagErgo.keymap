@@ -36,11 +36,6 @@
             key-positions = <54 27 28>;
         };
 
-        RaiseLayer1 {
-            bindings = <&mo 1>;
-            key-positions = <43 42>;
-        };
-
         RaiseLayer1_1 {
             bindings = <&mo 1>;
             key-positions = <19 20>;
@@ -56,6 +51,7 @@
         create_text_file: create_text_file {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <30>;
             bindings = <&kp LS(F10) &kp W &kp T>;
             label = "CREATE_TEXT_FILE";
         };
