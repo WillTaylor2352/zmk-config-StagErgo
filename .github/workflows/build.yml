@@ -3,4 +3,6 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.2
+    # Local copy of ZMK v0.2's workflow with Node.js 24 actions (see the file's header).
+    # Was: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.2
+    uses: ./.github/workflows/build-user-config.yml
